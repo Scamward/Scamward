@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Scamward handles local practice data, backups, and support enquiries.">
+  <meta name="description" content="How Scamward handles local practice data, optional email accounts, deletion, backups, and support enquiries.">
   <title>Privacy Policy — Scamward</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,11 +11,11 @@
 <main>
   <header>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Scamward · Last updated 8 October 2026</p>
+    <p class="subtitle">Scamward · Last updated 24 October 2026</p>
     <nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a></nav>
   </header>
   <div class="panel">
-    <p><strong>Scamward works entirely offline and does not transmit your practice data.</strong> There are no accounts, ads, tracking, analytics services, or live AI. Your choices stay in the app on your device, subject to your system backup settings.</p>
+    <p><strong>Core practice works offline; no account is required.</strong> Scamward does not transmit or sync your practice history. Version 1.1 adds an optional email account, which requires an internet connection. There are no ads, tracking, third-party analytics SDKs, or live AI. Your practice choices stay on your device, subject to your system backup settings.</p>
   </div>
   <h2>About this policy</h2>
   <p>Scamward — The Practice Room is provided by Malthe Hertz (“we”, “us”). This policy covers the app, these information pages, and information you choose to send when requesting support.</p>
@@ -32,26 +32,38 @@
     </tbody>
   </table>
   <p>Practice conversations are fictional, written scenarios bundled with the app. Replies are selected from provided choices. The app does not read your real messages or ask you to upload them. Searches of practices and lessons run on your device.</p>
+  <h2>Optional email account</h2>
+  <p>If you choose Account and request a sign-in code, the app sends your email address to <strong>auth.scward.email</strong> over HTTPS. Our Cloudflare-hosted authentication service uses Cloudflare Email Service to send a six-digit verification code. Your email provider also processes that message. Requesting a code does not create an account; successful verification does.</p>
+  <p>The authentication database stores your normalized email address, a generated user ID, verification and creation dates, and session records including creation, expiry, last-use, and revocation dates. It stores keyed digests of session tokens and verification codes, not the raw tokens or codes. Email and IP-derived keyed digests are used to limit abusive requests. Cloudflare necessarily processes IP addresses and request information to deliver and protect the service.</p>
+  <p>On your device, the session token, account email, user ID, and session expiry are saved only in the iOS Keychain, accessible while the device is unlocked and not transferable to another device. They are not stored in practice history, ordinary preferences, analytics, or app logs. Signing in does not upload, recover, or synchronize your practices or bookmarks.</p>
+  <h2>Account retention and deletion</h2>
+  <p>A verification code expires after ten minutes and can be used once. Sessions expire after thirty days unless revoked earlier; there is no automatic refresh. Account records remain until you delete your account. Expired challenge and session records are removed by scheduled cleanup.</p>
+  <p>In <strong>Account</strong>, <strong>Log out</strong> revokes the current session and removes its local Keychain record; it does not delete your account or other devices’ sessions. If the server cannot be reached, you can separately remove the session from this device. Local removal does not revoke the server session, which remains valid until revoked or expired.</p>
+  <p>Choose <strong>Delete account</strong> in Account and confirm to delete your user record, all its sessions, and the current email challenge from the active authentication database. This needs a valid session and a working connection. If you are signed out, verify your email first. If the result cannot be confirmed, the app tells you rather than claiming deletion succeeded. Contact us if you cannot regain access.</p>
+  <p>Account deletion does <strong>not</strong> delete device-local practice history. You may create a new account with the same email later. Pseudonymous anti-abuse buckets are retained until their existing expiry (at most twenty-four hours from creation); deletion does not restart that period. Expired buckets no longer restrict requests and are physically removed by scheduled cleanup, which can occur later.</p>
+  <p>Deletion from the active database is not immediate erasure from provider backups. Cloudflare D1 point-in-time recovery can retain previous database states for up to thirty days. Cloudflare also processes delivery, security, and operational records under its service terms. Email preview is currently enabled for our sending domain; sent-message previews may be retained for approximately seven days. Copies already delivered to your mailbox are governed by your email provider and your settings. These provider records and mailbox copies are not removed by the app’s account deletion action.</p>
+  <p>Application authentication logs contain fixed operational event names, not email addresses, raw IP addresses, codes, or tokens. This does not mean that infrastructure or email providers keep no operational records. See Cloudflare’s <a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a>, <a href="https://developers.cloudflare.com/d1/reference/time-travel/">D1 backup documentation</a>, and <a href="https://developers.cloudflare.com/email-service/observability/logs/">Email Service activity-log documentation</a>.</p>
   <h2>What the app does not collect or access</h2>
   <ul>
-    <li>No account details, contact information, advertising identifiers, or location data.</li>
+    <li>No advertising identifiers or location access. An email address is collected only when you use the optional account service or contact support.</li>
     <li>No access to your contacts, photos, camera, microphone, messages, or financial accounts.</li>
     <li>No advertising, tracking across apps or websites, or third-party analytics or crash-reporting SDKs.</li>
-    <li>No network requests, server uploads, live AI processing, or app-managed cloud sync.</li>
+    <li>No upload of practice data, live AI processing, or app-managed practice sync. Optional authentication uses network requests.</li>
     <li>No sale or sharing of your local practice data.</li>
   </ul>
   <h2>Retention, deletion, and backups</h2>
   <p>Local progress remains until you delete it or remove the app. Open the app’s settings (“Your room”), choose <strong>Delete all progress</strong>, and confirm to remove your unfinished practice, practice history, and saved lessons. Your haptics preference is kept.</p>
+  <p><strong>Delete all progress</strong> does not delete your email account or sign you out. Account deletion and local progress deletion are separate choices. Deleting or offloading the app is not an account-deletion request; use Account before uninstalling. Keychain records may survive reinstallation on the same device.</p>
   <p>Deleting the app using the system’s <strong>Delete App</strong> option removes its local storage, including preferences. Offloading the app can retain its data.</p>
   <p>Scamward disables CloudKit sync, but iCloud or computer backups may still include app data according to your system settings. Deleting progress does not remove copies in existing backups; restoring a backup may restore earlier data. Manage backups through Apple’s system settings. We cannot access, recover, or delete those backups for you.</p>
   <h2>If you contact support</h2>
-  <p>If you email us, we receive your email address and any information or attachments you send. We use this information to respond to your request and troubleshoot the reported issue. Email is handled by the email providers involved and is separate from the offline app.</p>
+  <p>If you email us, we receive your email address and any information or attachments you send. We use this information to respond to your request and troubleshoot the reported issue. Support correspondence is handled by the email providers involved and is separate from sign-in and local practice data.</p>
   <p>We keep support correspondence only as long as reasonably needed to handle your request and any applicable legal obligations. Do not send passwords, payment details, verification codes, or other sensitive information. You can request deletion of support correspondence at the address below, subject to applicable legal requirements.</p>
   <h2>These web pages and platform services</h2>
   <p>These pages contain no analytics scripts, advertising, forms, or cookies set by us. When served through GitHub Pages, GitHub may process technical information such as your IP address and request details under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. Website hosting is separate from use of the offline app.</p>
   <p>Apple’s App Store, operating-system diagnostics, and backup services operate under Apple’s own privacy terms and your settings. This policy describes Scamward’s behavior and does not replace those terms.</p>
   <h2>Children’s privacy</h2>
-  <p>The app does not collect or transmit personal information from users, including children. If a child sends personal information in a support email, a parent or guardian can contact us to request its deletion.</p>
+  <p>Practice does not require an account or personal information. If a child provides personal information through an optional account or support email, a parent or guardian can contact us to request its deletion. Account deletion is also available inside the app as described above.</p>
   <h2>Your choices and privacy requests</h2>
   <p>You control local progress through the deletion option above. Depending on your location, you may also have rights to access, correct, or delete personal information you have sent us, or to object to or restrict its processing. Contact us to make a request. We cannot retrieve practice records that remain only on your device. You may also contact your local data protection authority.</p>
   <h2>Changes</h2>
