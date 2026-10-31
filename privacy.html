@@ -11,7 +11,7 @@
 <main>
   <header>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Scamward · Last updated 24 October 2026</p>
+    <p class="subtitle">Scamward · Last updated 31 October 2026</p>
     <nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a></nav>
   </header>
   <div class="panel">
@@ -29,9 +29,12 @@
       <tr><td>Completed and partial attempts, scenario references, and start and finish dates</td><td>To show reflections, history, and learning habits in Journey</td></tr>
       <tr><td>Saved lesson references</td><td>To remember your bookmarks</td></tr>
       <tr><td>Your haptics preference</td><td>To remember whether gentle haptics are enabled</td></tr>
+      <tr><td>Confirmed spam sender identifiers you add</td><td>To filter matching SMS and MMS locally when you enable the filter</td></tr>
     </tbody>
   </table>
-  <p>Practice conversations are fictional, written scenarios bundled with the app. Replies are selected from provided choices. The app does not read your real messages or ask you to upload them. Searches of practices and lessons run on your device.</p>
+  <p>Practice conversations are fictional, written scenarios bundled with the app. Replies are selected from provided choices. Searches of practices and lessons run on your device.</p>
+  <h2>Optional SMS filtering</h2>
+  <p>If you enable Scamward as your SMS filter in iOS Settings, iOS may provide the filter with information about an incoming SMS or MMS from an unknown sender. The filter compares the sender identifier with your locally stored list of confirmed spam senders. Matching messages may be moved to Junk; the list starts empty. The filter does not use or store message text, transmit sender identifiers or message content, or filter iMessage or messages from contacts. Remove a sender from the list in the app's SMS protection settings. Disable the filter in iOS Settings if you no longer want it to run.</p>
   <h2>Optional email account</h2>
   <p>If you choose Account and request a sign-in code, the app sends your email address to <strong>auth.scward.email</strong> over HTTPS. Our Cloudflare-hosted authentication service uses Cloudflare Email Service to send a six-digit verification code. Your email provider also processes that message. Requesting a code does not create an account; successful verification does.</p>
   <p>The authentication database stores your normalized email address, a generated user ID, verification and creation dates, and session records including creation, expiry, last-use, and revocation dates. It stores keyed digests of session tokens and verification codes, not the raw tokens or codes. Email and IP-derived keyed digests are used to limit abusive requests. Cloudflare necessarily processes IP addresses and request information to deliver and protect the service.</p>
@@ -46,7 +49,7 @@
   <h2>What the app does not collect or access</h2>
   <ul>
     <li>No advertising identifiers or location access. An email address is collected only when you use the optional account service or contact support.</li>
-    <li>No access to your contacts, photos, camera, microphone, messages, or financial accounts.</li>
+    <li>No access to your contacts, photos, camera, microphone, or financial accounts. Optional SMS filtering receives sender information as described above.</li>
     <li>No advertising, tracking across apps or websites, or third-party analytics or crash-reporting SDKs.</li>
     <li>No upload of practice data, live AI processing, or app-managed practice sync. Optional authentication uses network requests.</li>
     <li>No sale or sharing of your local practice data.</li>
