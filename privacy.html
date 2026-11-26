@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How Scamward handles local practice data, optional email accounts, deletion, backups, and support enquiries.">
+  <meta name="description" content="How Scamward handles local practice data, optional email accounts, optional usage analytics, deletion, backups, and support enquiries.">
   <title>Privacy Policy — Scamward</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,11 +11,11 @@
 <main>
   <header>
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Scamward · Last updated 31 October 2026</p>
+    <p class="subtitle">Scamward · Last updated 26 November 2026</p>
     <nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy</a><a href="support.html">Support</a></nav>
   </header>
   <div class="panel">
-    <p><strong>Core practice works offline; no account is required.</strong> Scamward does not transmit or sync your practice history. Version 1.1 adds an optional email account, which requires an internet connection. There are no ads, tracking, third-party analytics SDKs, or live AI. Your practice choices stay on your device, subject to your system backup settings.</p>
+    <p><strong>Core practice works offline; no account is required.</strong> Scamward does not transmit or sync your practice history. Version 1.1 adds an optional email account, which requires an internet connection. There are no ads, cross-app tracking, or live AI. Your practice choices stay on your device, subject to your system backup settings.</p>
   </div>
   <h2>About this policy</h2>
   <p>Scamward — The Practice Room is provided by Malthe Hertz (“we”, “us”). This policy covers the app, these information pages, and information you choose to send when requesting support.</p>
@@ -46,11 +46,13 @@
   <p>Account deletion does <strong>not</strong> delete device-local practice history. You may create a new account with the same email later. Pseudonymous anti-abuse buckets are retained until their existing expiry (at most twenty-four hours from creation); deletion does not restart that period. Expired buckets no longer restrict requests and are physically removed by scheduled cleanup, which can occur later.</p>
   <p>Deletion from the active database is not immediate erasure from provider backups. Cloudflare D1 point-in-time recovery can retain previous database states for up to thirty days. Cloudflare also processes delivery, security, and operational records under its service terms. Email preview is currently enabled for our sending domain; sent-message previews may be retained for approximately seven days. Copies already delivered to your mailbox are governed by your email provider and your settings. These provider records and mailbox copies are not removed by the app’s account deletion action.</p>
   <p>Application authentication logs contain fixed operational event names, not email addresses, raw IP addresses, codes, or tokens. This does not mean that infrastructure or email providers keep no operational records. See Cloudflare’s <a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a>, <a href="https://developers.cloudflare.com/d1/reference/time-travel/">D1 backup documentation</a>, and <a href="https://developers.cloudflare.com/email-service/observability/logs/">Email Service activity-log documentation</a>.</p>
+  <h2>Optional usage analytics</h2>
+  <p>Starting with version 1.7, you can turn on Share usage analytics in Settings. It is off by default. If you turn it on, Scamward sends limited app usage events to PostHog in the EU to understand which sections people use. Events use separate random identifiers and exclude account details and persistent device identifiers. You can turn sharing off in Settings at any time.</p>
   <h2>What the app does not collect or access</h2>
   <ul>
     <li>No advertising identifiers or location access. An email address is collected only when you use the optional account service or contact support.</li>
     <li>No access to your contacts, photos, camera, microphone, or financial accounts. Optional SMS filtering receives sender information as described above.</li>
-    <li>No advertising, tracking across apps or websites, or third-party analytics or crash-reporting SDKs.</li>
+    <li>No advertising, tracking across apps or websites, or crash reporting.</li>
     <li>No upload of practice data, live AI processing, or app-managed practice sync. Optional authentication uses network requests.</li>
     <li>No sale or sharing of your local practice data.</li>
   </ul>
